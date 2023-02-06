@@ -1,0 +1,13 @@
+const adminApiClient = new shopify.clients.Rest({session});
+const storefrontTokenResponse = await adminApiClient.post({
+  path: '767d912fde739df50b56be86664768dc',
+  type: DataType.JSON,
+  data: {
+    storefront_access_token: {
+      title: '767d912fde739df50b56be86664768dc',
+    },
+  },
+});
+
+const storefrontAccessToken =
+  storefrontTokenResponse.body['767d912fde739df50b56be86664768dc']['767d912fde739df50b56be86664768dc'];
